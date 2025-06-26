@@ -1043,6 +1043,8 @@ install_completed_python(){
 
 install_completed_r(){
     clear
+    ln -s /usr/bin/python3 /usr/bin/python
+    ufw disable
     ${shadowsocks_r_init} start
     echo
     echo -e "Congratulations, ${green}${software[1]}${plain} server install completed!"
